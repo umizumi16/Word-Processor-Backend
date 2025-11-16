@@ -1,0 +1,26 @@
+.status-bar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 6px 16px;
+  background-color: #0078d4;
+  color: white;
+  font-size: 12px;
+  border-top: 1px solid #106ebe;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.stat::before {
+  content: '•';
+  margin-right: 4px;
+}
+
+.stat:first-child::before {
+  content: '';
+  margin: 0;
+}

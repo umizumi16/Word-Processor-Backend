@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f3f3f3;
+  overflow: hidden;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f3f3f3;
+}
+
+.app-header {
+  background: linear-gradient(to bottom, #0078d4, #106ebe);
+  color: white;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.app-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.header-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.save-status {
+  font-size: 12px;
+  padding: 4px 12px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 12px;
+}
+
+.backend-status {
+  font-size: 12px;
+  padding: 4px 12px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 12px;
+}
+
+.status-ok {
+  color: #90ee90;
+  font-weight: bold;
+}
+
+.status-error {
+  color: #ff6b6b;
+  font-weight: bold;
+}
+
+/* Main content area */
+.main-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.editor-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #fff;
+}
+
+.sidebar {
+  width: 320px;
+  background: #f9f9f9;
+  border-left: 1px solid #d1d1d1;
+  overflow-y: auto;
+}
+
+.spellcheck-toggle {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #0078d4;
+  color: white;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: all 0.3s;
+  z-index: 100;
+}
+
+.spellcheck-toggle:hover {
+  background: #106ebe;
+  transform: scale(1.1);
+}
+
+/* Print styles */
+@media print {
+  .app-header,
+  .menu-bar,
+  .format-toolbar,
+  .toolbar,
+  .status-bar,
+  .spellcheck-toggle,
+  .sidebar {
+    display: none !important;
+  }
+  
+  .editor-wrapper {
+    padding: 0;
+    background: white;
+  }
+  
+  .editor {
+    box-shadow: none;
+    width: 100%;
+    margin: 0;
+  }
+}
