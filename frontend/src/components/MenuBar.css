@@ -78,3 +78,43 @@
   background-color: #edebe9;
   margin: 4px 0;
 }
+.symbol-dialog {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(0,0,0,0.3);
+  z-index: 5000;
+}
+.symbol-panel {
+  background: #fff;
+  padding: 22px 32px 16px 32px;
+  border-radius: 6px;
+  box-shadow: 0 2px 12px #666;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+.symbol-panel span {
+  font-size: 2rem;
+  padding: 5px 14px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  user-select: none;
+  background: #f7f7fa;
+  margin: 3px;
+  transition: background 0.15s;
+}
+.symbol-panel span:hover {
+  background: #e7f3ff;
+}
+.symbol-panel button {
+  padding: 6px 20px;
+  margin: 10px 0 0 10px;
+  background: #ececec;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+}

@@ -39,12 +39,12 @@ function App() {
       });
   }, []);
 
-  useEffect(() => {
-    const plainText = documentContent.replace(/<[^>]*>/g, '');
-    const lines = plainText.split('\n').length;
-    const estimatedPages = Math.max(1, Math.ceil(lines / 40));
-    setPageCount(estimatedPages);
-  }, [documentContent]);
+  // useEffect(() => {
+  //   const plainText = documentContent.replace(/<[^>]*>/g, '');
+  //   const lines = plainText.split('\n').length;
+  //   const estimatedPages = Math.max(1, Math.ceil(lines / 40));
+  //   setPageCount(estimatedPages);
+  // }, [documentContent]);
 
   useEffect(() => {
     const words = documentContent
@@ -266,7 +266,7 @@ function App() {
           <FormatToolbar />
           <div className="main-content">
             <div className="editor-section">
-              <Editor content={documentContent} onChange={handleContentChange} />
+              <Editor content={documentContent} onChange={handleContentChange} onPageCountChange={setPageCount} />
             </div>
             {showSpellCheck && (
               <div className="sidebar">

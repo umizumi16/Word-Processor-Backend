@@ -128,32 +128,30 @@
 
 .editor img,
 .editor .resizable-img {
-  display: inline-block;
-  margin: 8px 0;
-  /* Blue border like Word when selected */
-  border: 2px solid transparent;
+  display: block;
+  margin: 10px auto;
+  max-width: 100%;
+  height: auto;
+  border: 1.5px solid #c4c4c4;
   box-sizing: border-box;
-  background: #fff;
+  background: #f8f8f8;
   resize: both;
   overflow: auto;
   min-width: 32px;
   min-height: 32px;
-  /* Allow up to usable width inside the page - adjust as needed */
-  max-width: 720px;
-  max-height: 880px;
-  /* Show native resize handles in Chrome/Edge/Safari */
+  max-height: 880px; /* fits within page with padding */
+  cursor: pointer;
 }
-
-/* Add visual "Word-like" blue selection border when focused/selected */
 .editor img:focus,
-.editor .resizable-img:focus,
-.editor img.selected,
-.editor .resizable-img.selected {
-  border: 2px solid #2e7ffc;
-  outline: 1.5px solid #2e7ffc;
-  box-shadow: 0 0 0 2px #bed7ff;
+.editor .resizable-img:focus {
+  outline: 2px solid #0078d4;
+  border: 2px solid #0078d4;
 }
-
+.resizable-img.selected, .editor img.selected {
+  cursor: move !important;
+  box-shadow: 0 0 8px #0078d4;
+  outline: 2px dashed #0078d4;
+}
 
 .page-break {
   page-break-after: always;
@@ -294,6 +292,8 @@
   .page-break span {
     display: none;
   }
+  css
+.editor a { color: #1a0dab; text-decoration: underline; }
 }
 
 
